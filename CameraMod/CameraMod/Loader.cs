@@ -46,6 +46,10 @@ namespace CameraMod
             if (Input.GetKeyDown(KeyCode.Insert))
             {
                 menuOpen = !menuOpen;
+                if (!menuOpen)
+                {
+                    Cursor.visible = false;
+                }
             }
         }
 
@@ -66,11 +70,6 @@ namespace CameraMod
 
                 GUI.Label(new Rect(110f, 100f, 150f, 30f), $"Aspect : {currentAspect}");
                 currentAspect = GUI.HorizontalSlider(new Rect(110f, 90f, 150f, 30f), currentAspect, 0.5f, 3f);
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
             }
         }
 
