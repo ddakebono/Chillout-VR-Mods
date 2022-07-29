@@ -19,6 +19,9 @@ Initializes a Unity GUI menu that allows you to edit the camera's FOV and Aspect
 ---
 
 ### Floor Drop :fallen_leaf: (PATCHED)
+
+DISCLAIMER: This has since been patched by CVR after me and a few others reported it directly to the devs.
+
 An educational proof of concept of breaking colliders.
 
 This exploit works by instantiating portals (or any other networked object) at either an extremely low, or high floating point value.
@@ -35,3 +38,10 @@ To learn more about this, look at Computerphile's extremely informative video:
 
 ### No Discord RPC :closed_lock_with_key: 
 Disables CVR's custom Discord RPC as soon as it initializes.
+
+---
+
+### QM Freeze :stop_button: 
+Disables the local players movement system when either of the menu's are opened. Allowing you to open and control your menu while falling.
+
+Yes i'm aware a similar mod has been created for BepinEx by 'xKiraiChan, but i didn't find out about this till i'd finished this mod.
