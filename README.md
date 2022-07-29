@@ -43,5 +43,6 @@ Disables CVR's custom Discord RPC as soon as it initializes.
 
 ### QM Freeze :stop_button: 
 Disables the local players movement system when either of the menu's are opened. Allowing you to open and control your menu while falling.
+This keeps you completely still in air whenever any menu is open.
 
 Yes i'm aware a similar mod has been created for BepinEx by 'xKiraiChan', but i didn't find out about this till i'd finished this mod.
