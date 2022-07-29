@@ -25,7 +25,7 @@ namespace FloorDrop
 
             if (PlayerSetup.Instance != null && floorDrop)
             {
-                CVRSyncHelper.SpawnPortal("i+419d1525b0ca1683-921003-133d82-16d0b31a", float.NaN, float.NaN, float.NaN);
+                CVRSyncHelper.SpawnPortal("i+419d1525b0ca1683-921003-133d82-16d0b31a", float.NaN, float.NaN, float.NaN); // It doesn't need to be spammed so much, but i'm lazy
             }
         }
 
