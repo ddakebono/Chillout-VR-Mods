@@ -1,5 +1,5 @@
 # Chillout-VR-Mods
-QOL mods for the game 'Chillout VR' or 'CVR'
+QOL mods for the game 'Chillout VR' or 'CVR' to be used with 'Melonloader'
 
 --- 
 ### How to compile
