@@ -18,7 +18,7 @@ Initializes a Unity GUI menu that allows you to edit the camera's FOV and Aspect
 
 ---
 
-### Floor Drop :fallen_leaf: 
+### Floor Drop :fallen_leaf: (PATCHED)
 An educational proof of concept of breaking colliders.
 
 This exploit works by instantiating portals (or any other networked object) at either an extremely low, or high floating point value.
