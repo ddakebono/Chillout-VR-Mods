@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QMFreeze</RootNamespace>
+    <AssemblyName>QMFreeze</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(CVR)\Mods</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(CVR)\MelonLoader\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Accessibility" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AssetRipper.VersionUtilities">
+      <HintPath>$(CVR)\MelonLoader\AssetRipper.VersionUtilities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AssetsTools.NET">
+      <HintPath>$(CVR)\MelonLoader\AssetsTools.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aura2_Core">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Aura2_Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AVProVideo.Demos">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AVProVideo.Demos.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.Timeline">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AVProVideo.Extensions.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.UnityUI">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AVProVideo.Extensions.UnityUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AVProVideo.Extensions.VisualEffectGraph">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AVProVideo.Extensions.VisualEffectGraph.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AVProVideo.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AVProVideo.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AwesomeTechnologies.TouchReactSystemPro.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AwesomeTechnologies.TouchReactSystemPro.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AwesomeTechnologies.VegetationStudioPro.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\AwesomeTechnologies.VegetationStudioPro.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bhaptics.Tact">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Bhaptics.Tact.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Boxophobic.TheVehetationEngine.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Boxophobic.TheVehetationEngine.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Boxophobic.Utils.Scripts">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Boxophobic.Utils.Scripts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="cohtml.Net">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\cohtml.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cohtml.RenderingBackend">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Cohtml.RenderingBackend.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cohtml.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Cohtml.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Crc32.NET">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Crc32.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DarkRift">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\DarkRift.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DarkRift.Client">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\DarkRift.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DarkRift.Server">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\DarkRift.Server.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DissonanceVoip">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\DissonanceVoip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MagicaCloth">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\MagicaCloth.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>$(CVR)\MelonLoader\MelonLoader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MeshBakerCore">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\MeshBakerCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>$(CVR)\MelonLoader\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>$(CVR)\MelonLoader\Mono.Cecil.Mdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>$(CVR)\MelonLoader\Mono.Cecil.Pdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>$(CVR)\MelonLoader\Mono.Cecil.Rocks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Mono.Data.Sqlite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Mono.Posix.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Mono.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Mono.WebBrowser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>$(CVR)\MelonLoader\MonoMod.RuntimeDetour.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>$(CVR)\MelonLoader\MonoMod.Utils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MPUIKit">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\MPUIKit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NicoKuroKusagi">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\NicoKuroKusagi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Novell.Directory.Ldap.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PWCommon3DLL">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\PWCommon3DLL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="QHierarchyNullable">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\QHierarchyNullable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="QHierarchyRuntime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\QHierarchyRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SALSA">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\SALSA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SALSA-LipSync">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\SALSA-LipSync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ShapesRuntime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\ShapesRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SteamAudioUnity">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\SteamAudioUnity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SteamVR">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\SteamVR.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SteamVR_Actions">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\SteamVR_Actions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tobii.GameIntegration.Net">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Tobii.GameIntegration.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TobiiXRCore">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\TobiiXRCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TobiiXRDevTools">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\TobiiXRDevTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TobiiXRG2OM">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\TobiiXRG2OM.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TobiiXRSDK">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\TobiiXRSDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tomlet">
+      <HintPath>$(CVR)\MelonLoader\Tomlet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UniTask.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniTask.Addressables">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UniTask.Addressables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniTask.DOTween">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UniTask.DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniTask.Linq">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UniTask.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniTask.TextMeshPro">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UniTask.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Analytics.DataPrivacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Build.SlimPlayerRuntime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Build.SlimPlayerRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Burst.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Burst.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Deformations">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Deformations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Entities">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Entities.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Entities.Hybrid">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Entities.Hybrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.003">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Jobs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Extensions">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Mathematics.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Extensions.Hybrid">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Platforms.Common">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Platforms.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Polybrush">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Polybrush.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.ProBuilder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.ProBuilder.KdTree.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Stl">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.ProBuilder.Stl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Properties">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Properties.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Properties.Reflection">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Properties.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Properties.UI">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Properties.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Scenes.Hybrid">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Scenes.Hybrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.ScriptableBuildPipeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Serialization">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Transforms">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Transforms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Transforms.Hybrid">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.Transforms.Hybrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Unity.VectorGraphics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.Advertisements.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.Monetization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>$(CVR)\ChilloutVR_Data\Managed\Valve.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
