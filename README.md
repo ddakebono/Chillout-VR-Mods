@@ -30,3 +30,8 @@ To learn more about this, look at Computerphile's extremely informative video:
 [![Computerphile Floating Point Accuracy](https://img.youtube.com/vi/PZRI1IfStY0/0.jpg)](https://www.youtube.com/watch?v=PZRI1IfStY0)
 
 - Keybinds: [Insert] - Toggles GUI Menu
+
+---
+
+### No Discord RPC :closed_lock_with_key: 
+Disables CVR's custom Discord RPC as soon as it initializes.
