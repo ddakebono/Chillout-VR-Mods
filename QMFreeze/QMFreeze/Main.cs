@@ -16,7 +16,7 @@ namespace QMFreeze
             harmonyInstance.Patch(
                typeof(CVR_MenuManager).GetMethod(nameof(CVR_MenuManager.ToggleQuickMenu), type),
                null,
-               new HarmonyLib.HarmonyMethod(typeof(Main).GetMethod(nameof(UIToggle), AccessTools.all)) // In most circumstances, using AccessTools.all is an extremely bad idea. This will be corrected soon // 
+               new HarmonyLib.HarmonyMethod(typeof(Main).GetMethod(nameof(UIToggle), AccessTools.all)) // In most circumstances, using AccessTools.all is bad practice, and inefficent. This will be corrected soon // 
            );
 
             harmonyInstance.Patch(
