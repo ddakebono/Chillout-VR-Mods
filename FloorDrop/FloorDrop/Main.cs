@@ -1,4 +1,4 @@
-﻿using ABI_RC.Core.Player;
+using ABI_RC.Core.Player;
 using ABI_RC.Core.Util;
 using MelonLoader;
 using UnityEngine;
@@ -10,8 +10,6 @@ namespace FloorDrop
         public static bool floorDrop;
         public static bool menuOpen;
 
-        public static string buttonLabel = "<color=red>Floor Drop</color>";
-
         public override void OnUpdate()
         {
             if (Input.GetKeyDown(KeyCode.Insert))
@@ -21,11 +19,6 @@ namespace FloorDrop
                 {
                     Cursor.visible = false;
                 }
-            }
-
-            if (PlayerSetup.Instance != null && floorDrop)
-            {
-                CVRSyncHelper.SpawnPortal("i+419d1525b0ca1683-921003-133d82-16d0b31a", float.NaN, float.NaN, float.NaN); // It doesn't need to be spammed so much, but i'm lazy
             }
         }
 
@@ -41,17 +34,11 @@ namespace FloorDrop
 
                 GUI.Box(new Rect(300, 20f, 200, 120), "<b><size=25>Floor Drop</size></b>");
 
-                if (GUI.Button(new Rect(310f, 50f, 150f, 30f), buttonLabel))
+                if (GUI.Button(new Rect(310f, 50f, 150f, 30f), "Floor Drio"))
                 {
-                    floorDrop = !floorDrop;
-
-                    if (floorDrop)
+                    if (PlayerSetup.Instance != null && floorDrop)
                     {
-                        buttonLabel = "<color=green>Floor Drop</color>";
-                    }
-                    else
-                    {
-                        buttonLabel = "<color=red>Floor Drop</color>";
+                        CVRSyncHelper.SpawnPortal("i+419d1525b0ca1683-921003-133d82-16d0b31a", float.NaN, float.NaN, float.NaN); // It doesn't need to be spammed so much, but i'm lazy
                     }
                 }
             }
