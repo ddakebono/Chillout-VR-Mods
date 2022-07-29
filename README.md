@@ -24,6 +24,7 @@ This exploit works by instantiating portals (or any other networked object) at e
 This becomes an issue due to floating point accuracy, which causes major issues, as the more specific a number, the less accurate it is calculated.
 For example : 'invalidating colliders'.
 To learn more about this, look at Computerphile's extremely informative video: 
+
 [![Computerphile Floating Point Accuracy](https://img.youtube.com/vi/PZRI1IfStY0/0.jpg)](https://www.youtube.com/watch?v=PZRI1IfStY0)
 
 - Keybinds: [Insert] - Toggles GUI Menu
