@@ -16,6 +16,8 @@ Initializes a Unity GUI menu that allows you to edit the camera's FOV and Aspect
 
 - Keybinds: [Insert] - Toggles GUI Menu
 
+---
+
 ### Floor Drop :fallen_leaf: 
 An educational proof of concept of breaking colliders.
 
