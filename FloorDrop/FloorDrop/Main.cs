@@ -34,7 +34,7 @@ namespace FloorDrop
 
                 GUI.Box(new Rect(300, 20f, 200, 120), "<b><size=25>Floor Drop</size></b>");
 
-                if (GUI.Button(new Rect(310f, 50f, 150f, 30f), "Floor Drio"))
+                if (GUI.Button(new Rect(310f, 50f, 150f, 30f), "Floor Drop"))
                 {
                     if (PlayerSetup.Instance != null && floorDrop)
                     {
