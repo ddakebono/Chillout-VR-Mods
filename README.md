@@ -15,3 +15,12 @@ QOL mods for the game 'Chillout VR' or 'CVR'
 Initializes a Unity GUI menu that allows you to edit the camera's FOV and Aspect Ratio. 
 
 - Keybinds: [Insert] - Toggles GUI Menu
+
+### Floor Drop :fallen_leaf: 
+An educational proof of concept of breaking colliders.
+This exploit works by instantiating portals (or any other networked object) at either an extremely low, or high floating point value.
+This becomes an issue due to floating point accuracy, which causes major issues, such as making 'invalidating colliders'.
+To learn more about this, look at Computerphile's extremely informative video: 
+[![Computerphile Floating Point Accuracy](https://img.youtube.com/vi/PZRI1IfStY0/0.jpg)](https://www.youtube.com/watch?v=PZRI1IfStY0)
+
+- Keybinds: [Insert] - Toggles GUI Menu
