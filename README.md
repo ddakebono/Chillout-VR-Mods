@@ -46,3 +46,9 @@ Disables the local players movement system when either of the menu's are opened.
 This keeps you completely still in air whenever any menu is open.
 
 Yes i'm aware a similar mod has been created for BepinEx by 'xKiraiChan', but i didn't find out about this till i'd finished this mod.
+
+---
+
+### No Mirrors :mirror: 
+
+Instantly deletes all mirrors the second they try to be rendered. This may help with performance or just be a preference.
