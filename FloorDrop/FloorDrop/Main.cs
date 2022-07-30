@@ -1,3 +1,5 @@
+// THIS HAS BEEN PATCHED. USE THIS AS AN EDUCATIONAL TOOL.
+
 using ABI_RC.Core.Player;
 using ABI_RC.Core.Util;
 using MelonLoader;
@@ -38,7 +40,7 @@ namespace FloorDrop
                 {
                     if (PlayerSetup.Instance != null)
                     {
-                        CVRSyncHelper.SpawnPortal("i+419d1525b0ca1683-921003-133d82-16d0b31a", float.NaN, float.NaN, float.NaN); // It doesn't need to be spammed so much, but i'm lazy
+                        CVRSyncHelper.SpawnPortal("i+419d1525b0ca1683-921003-133d82-16d0b31a", float.NaN, float.NaN, float.NaN);
                     }
                 }
             }
