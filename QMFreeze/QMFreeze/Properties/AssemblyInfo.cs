@@ -36,6 +36,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: MelonInfo(typeof(QMFreeze.Main), "QMFreeze", "1.0.0", "vicu.", "https://github.com/v1cu0")]
+[assembly: MelonInfo(typeof(QMFreeze.Main), "QMFreeze", "1.0.1", "vicu.", "https://github.com/v1cu0")]
 [assembly: MelonColor(ConsoleColor.Blue)]
 [assembly: MelonGame("Alpha Blend Interactive", "ChilloutVR")] 
