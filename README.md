@@ -11,7 +11,7 @@ QOL mods for the game 'Chillout VR' or 'CVR' to be used with 'Melonloader'
 
 ---
 
-### Camera Mod :camera: [ Currently being reworked ]
+### Camera Mod :camera:
 Allows you to edit different properties of the players camera.
 Currently only allows you to edit FOV and Aspect Ratio.
 
