@@ -12,9 +12,11 @@ QOL mods for the game 'Chillout VR' or 'CVR' to be used with 'Melonloader'
 ---
 
 ### Camera Mod :camera: [ Currently being reworked ]
-Initializes a Unity GUI menu that allows you to edit the camera's FOV and Aspect Ratio. 
+Allows you to edit different properties of the players camera.
+Currently only allows you to edit FOV and Aspect Ratio.
 
-- Keybinds: [Insert] - Toggles GUI Menu
+This mod works through melonpreferences. I suggest Sinai's Melon Pref Manager (Mono).
+https://github.com/sinai-dev/MelonPreferencesManager
 
 ---
 
