@@ -16,6 +16,7 @@ Allows you to edit different properties of the players camera.
 Currently only allows you to edit FOV and Aspect Ratio.
 
 This mod works through melonpreferences. I suggest Sinai's Melon Pref Manager (Mono).
+
 https://github.com/sinai-dev/MelonPreferencesManager
 
 ---
