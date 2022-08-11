@@ -1,4 +1,6 @@
 # Chillout-VR-Mods
+This repo has been archived. The game isn't fun to me.
+
 QOL mods for the game 'Chillout VR' or 'CVR' to be used with 'Melonloader'
 
 --- 
