@@ -5,6 +5,11 @@ using HarmonyLib;
 
 namespace QMFreeze
 {
+    
+    /// <summary>
+    /// Reworked entire mod to use HarmonyX annotations and avoid causing issues with other mods
+    /// </summary>
+    
     public class Main : MelonMod
     {
 

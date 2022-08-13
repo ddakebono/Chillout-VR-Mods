@@ -5,6 +5,10 @@ using HarmonyLib;
 
 namespace NoDiscordRPC
 {
+    /// <summary>
+    /// Reworked mod to use HarmonyX annotations, removed coroutine usage and instead hooked methods that shouldn't be used.
+    /// </summary>
+    
     public class Main : MelonMod
     {
     }
