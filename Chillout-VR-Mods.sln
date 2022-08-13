@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QMFreeze", "QMFreeze\QMFreeze.csproj", "{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoMirrors", "NoMirrors\NoMirrors.csproj", "{BB2A7252-DA07-45C8-85A8-E03E8FF262DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoDiscordRPC", "NoDiscordRPC\NoDiscordRPC.csproj", "{9B6D10DC-40F2-4679-9980-C6AC39A38F45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2A7252-DA07-45C8-85A8-E03E8FF262DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2A7252-DA07-45C8-85A8-E03E8FF262DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2A7252-DA07-45C8-85A8-E03E8FF262DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2A7252-DA07-45C8-85A8-E03E8FF262DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6D10DC-40F2-4679-9980-C6AC39A38F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6D10DC-40F2-4679-9980-C6AC39A38F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6D10DC-40F2-4679-9980-C6AC39A38F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6D10DC-40F2-4679-9980-C6AC39A38F45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
