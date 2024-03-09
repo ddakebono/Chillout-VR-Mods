@@ -1,5 +1,5 @@
 ﻿using ABI_RC.Core.InteractionSystem;
-using ABI_RC.Systems.MovementSystem;
+using ABI_RC.Systems.Movement;
 using MelonLoader;
 using HarmonyLib;
 
@@ -23,8 +23,8 @@ namespace QMFreeze
         [HarmonyPatch(typeof(ViewManager), nameof(ViewManager.UiStateToggle), typeof(bool))]
         static void UIToggle(bool __0)
         {
-            if (MovementSystem.Instance != null)
-                MovementSystem.Instance.canMove = !__0;
+            if (BetterBetterCharacterController.Instance != null)
+                BetterBetterCharacterController.Instance.SetImmobilized(__0);
         }
     }
 }

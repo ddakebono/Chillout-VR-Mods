@@ -37,5 +37,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.1.0")]
 [assembly: AssemblyFileVersion("1.0.1.0")]
 [assembly: MelonInfo(typeof(NoDiscordRPC.Main), "No Discord RPC", "1.0.1", "vicu. & DDAkebono", "")]
-[assembly: MelonColor(ConsoleColor.Blue)]
+[assembly: MelonColor(255, 139,0,139)]
+[assembly: MelonAuthorColor(255, 139,0,139)]
 [assembly: MelonGame("Alpha Blend Interactive", "ChilloutVR")] 
