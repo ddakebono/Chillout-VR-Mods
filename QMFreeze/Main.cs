@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using ABI_RC.Core.InteractionSystem;
-using ABI_RC.Core.Player;
-using ABI_RC.Systems.Camera.VisualMods;
-using ABI_RC.Systems.GameEventSystem;
 using ABI_RC.Systems.Movement;
 using ECM2;
 using MelonLoader;
 using HarmonyLib;
+using Semver;
 
 namespace QMFreeze
 {
@@ -25,13 +23,24 @@ namespace QMFreeze
 
         public static MelonPreferences_Entry<bool> EnableQMFreeze;
         public static bool IsQMFreezeApplied;
+        public static bool IsToggledFrozen;
+        public static bool IsUIFrozen;
         public static Character.MovementMode MovementMode;
         public static bool SkipMovementSave;
 
         public override void OnInitializeMelon()
         {
-            var cat = MelonPreferences.CreateCategory("QMFreeze");
-            EnableQMFreeze = MelonPreferences.CreateEntry("QMFreeze", "EnableQMFreeze", true, "Enable QMFreeze", "Enables the QMFreeze immobilize functionality");
+            var cat = MelonPreferences.CreateCategory("PlayerFreeze");
+            EnableQMFreeze = MelonPreferences.CreateEntry("PlayerFreeze", "EnableQMFreeze", true, "Enable Freeze On UI Toggle", "Enables the PlayerFreeze UI immobilize functionality");
+
+            if (RegisteredMelons.Any(x => x.Info.Name.Equals("BTKUILib") && x.Info.SemanticVersion.CompareByPrecedence(new SemVersion(1, 9)) > 0))
+            {
+                BTKUILibIntegration.UILibApply();
+            }
+            else
+            {
+                LoggerInstance.Msg("BTKUILib not detected, PlayerFreeze movement freeze toggle will not be available!");
+            }
         }
     }
     
@@ -45,7 +54,8 @@ namespace QMFreeze
         {
             if(!Main.EnableQMFreeze.Value && !Main.IsQMFreezeApplied) return;
 
-            Main.IsQMFreezeApplied = __0;
+            Main.IsUIFrozen = __0;
+            Main.IsQMFreezeApplied = Main.IsUIFrozen || Main.IsToggledFrozen;
 
             if (BetterBetterCharacterController.Instance == null) return;
 

@@ -38,6 +38,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\3rdparty\managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="BTKUILib">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ChilloutVR\Mods\BTKUILib.dll</HintPath>
+    </Reference>
     <Reference Include="cohtml.Net">
       <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\cohtml.Net.dll</HintPath>
     </Reference>
@@ -55,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTKUILibIntegration.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
