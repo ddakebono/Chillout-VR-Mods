@@ -13,5 +13,10 @@ public class BTKUILibIntegration
             Main.IsToggledFrozen = b;
             Main.IsQMFreezeApplied = Main.IsToggledFrozen || Main.IsUIFrozen;
         };
+        var uiToggle = category.AddToggle("Freeze On UI Toggle", "Enables the PlayerFreeze UI immobilize functionality", Main.EnableQMFreeze.Value);
+        uiToggle.OnValueUpdated += b =>
+        {
+            Main.EnableQMFreeze.Value = b;
+        };
     }
 }
