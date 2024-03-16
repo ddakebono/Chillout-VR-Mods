@@ -1,8 +1,7 @@
 ﻿using MelonLoader;
-using System;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using Main = PlayerFreeze.Main;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
@@ -36,7 +35,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.1.1.0")]
 [assembly: AssemblyFileVersion("1.1.1.0")]
-[assembly: MelonInfo(typeof(QMFreeze.Main), "PlayerFreeze", "1.1.0", "vicu. & DDAkebono", "")]
+[assembly: MelonInfo(typeof(Main), "PlayerFreeze", "1.1.0", "vicu. & DDAkebono", "")]
 [assembly: MelonColor(255, 139,0,139)]
 [assembly: MelonAuthorColor(255, 139,0,139)]
 [assembly: MelonGame("Alpha Blend Interactive", "ChilloutVR")]

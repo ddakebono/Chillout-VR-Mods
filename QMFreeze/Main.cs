@@ -5,11 +5,11 @@ using System.Reflection.Emit;
 using ABI_RC.Core.InteractionSystem;
 using ABI_RC.Systems.Movement;
 using ECM2;
-using MelonLoader;
 using HarmonyLib;
+using MelonLoader;
 using Semver;
 
-namespace QMFreeze
+namespace PlayerFreeze
 {
     
     /// <summary>

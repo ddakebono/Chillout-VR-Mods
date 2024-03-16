@@ -1,6 +1,6 @@
 ﻿using BTKUILib;
 
-namespace QMFreeze;
+namespace PlayerFreeze;
 
 public class BTKUILibIntegration
 {

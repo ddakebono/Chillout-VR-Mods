@@ -7,8 +7,8 @@
     <ProjectGuid>{5B6EA6CF-C29F-407E-90C8-E1D905CD2C81}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QMFreeze</RootNamespace>
-    <AssemblyName>QMFreeze</AssemblyName>
+    <RootNamespace>PlayerFreeze</RootNamespace>
+    <AssemblyName>PlayerFreeze</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
