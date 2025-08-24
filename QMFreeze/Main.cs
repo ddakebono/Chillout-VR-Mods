@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using ABI_RC.Core.InteractionSystem;
+using ABI_RC.Core.UI.UIRework;
 using ABI_RC.Systems.Movement;
 using ECM2;
 using HarmonyLib;
@@ -48,18 +49,17 @@ namespace PlayerFreeze
     class UIOpenPatches
     {
         [HarmonyPostfix]
-        [HarmonyPatch(typeof(CVR_MenuManager), nameof(CVR_MenuManager.ToggleQuickMenu))]
-        [HarmonyPatch(typeof(ViewManager), nameof(ViewManager.UiStateToggle), typeof(bool))]
-        static void UIToggle(bool __0)
+        [HarmonyPatch(typeof(CVRUIManagerBaseInput), nameof(CVRUIManagerBaseInput.ToggleView))]
+        static void UIToggle(bool state)
         {
             if(!Main.EnableQMFreeze.Value && !Main.IsQMFreezeApplied) return;
 
-            Main.IsUIFrozen = __0;
+            Main.IsUIFrozen = state;
             Main.IsQMFreezeApplied = Main.IsUIFrozen || Main.IsToggledFrozen;
 
             if (BetterBetterCharacterController.Instance == null) return;
 
-            if (__0)
+            if (state)
             {
                 Main.SkipMovementSave = true;
                 if(BetterBetterCharacterController.Instance.GetMovementMode() != Character.MovementMode.Flying && BetterBetterCharacterController.Instance.GetMovementMode() != Character.MovementMode.Swimming)

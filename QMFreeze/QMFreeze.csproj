@@ -39,13 +39,13 @@
       <HintPath>..\3rdparty\managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BTKUILib">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ChilloutVR\Mods\BTKUILib.dll</HintPath>
+      <HintPath>..\3rdparty\mods\BTKUILib.dll</HintPath>
     </Reference>
     <Reference Include="cohtml.Net">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\cohtml.Net.dll</HintPath>
+      <HintPath>..\3rdparty\managed\cohtml.Net.dll</HintPath>
     </Reference>
     <Reference Include="ECM2">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\ChilloutVR\ChilloutVR_Data\Managed\ECM2.dll</HintPath>
+      <HintPath>..\3rdparty\managed\ECM2.dll</HintPath>
     </Reference>
     <Reference Include="MelonLoader">
       <HintPath>..\3rdparty\ml\MelonLoader.dll</HintPath>
