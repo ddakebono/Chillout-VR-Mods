@@ -34,9 +34,9 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
-[assembly: MelonInfo(typeof(NoMirrors.Main), "No Mirrors", "1.0.1", "vicu. & DDAkebono", "")]
+[assembly: AssemblyVersion("1.0.2.0")]
+[assembly: AssemblyFileVersion("1.0.2.0")]
+[assembly: MelonInfo(typeof(NoMirrors.Main), "No Mirrors", "1.0.2", "vicu. & DDAkebono", "")]
 [assembly: MelonColor(255, 139,0,139)]
 [assembly: MelonAuthorColor(255, 139,0,139)]
-[assembly: MelonGame("Alpha Blend Interactive", "ChilloutVR")] 
+[assembly: MelonGame("ChilloutVR", "ChilloutVR")]
